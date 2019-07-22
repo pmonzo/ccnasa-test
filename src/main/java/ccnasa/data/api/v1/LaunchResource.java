@@ -11,6 +11,7 @@ public enum LaunchResource {
 	private ILaunch launch;
 	
 	public void addLaunch(ILaunch launch) {
+		this.launch = launch;
 	}
 	
 	public ILaunch getLaunch() {

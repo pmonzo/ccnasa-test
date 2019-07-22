@@ -78,13 +78,13 @@ public class Launch implements ILaunch{
 	@Override
 	public String countdown(String format) {
 		
-		long now = Calendar.getInstance().getTimeInMillis();
+		long now = System.currentTimeMillis();
 		long remainingTime = this.launchTime - now;
 		String countdown;
 		if(remainingTime < 0) {
-			countdown = new SimpleDateFormat(format).format(new Date(0l));
+			countdown = "0.0";
 		} else {
-			countdown = new SimpleDateFormat(format).format(new Date(remainingTime));
+			countdown = String.valueOf(remainingTime/1000f);
 		}
 		logger.debug("Returned countdown: " + countdown);
 		return countdown;

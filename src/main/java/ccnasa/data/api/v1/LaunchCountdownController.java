@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ccnasa.ILaunch;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 public class LaunchCountdownController {
@@ -16,11 +16,11 @@ public class LaunchCountdownController {
     public LaunchCountdownController() {
     }
     @GetMapping(API_V1_PACKAGES)
-    public Flux<Countdown> all() {
+    public Mono<Countdown> all() {
     	ILaunch launch = resource.getLaunch();
     	String remainingTime = launch.countdown("s.S");
     	Countdown countdown = new Countdown.Builder().remainingTime(remainingTime).build();
-    	return Flux.just(countdown);
+    	return Mono.just(countdown);
     }
     
     /**@GetMapping(API_V1_PACKAGES + "/{id}")

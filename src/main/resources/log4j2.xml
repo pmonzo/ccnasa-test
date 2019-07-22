@@ -23,7 +23,7 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <AsyncLogger name="ccnasa" level="debug" additivity="false">
+        <AsyncLogger name="ccnasa" level="info" additivity="false">
             <AppenderRef ref="ConsoleAppender" />
             <AppenderRef ref="FileAppender" />
         </AsyncLogger>
