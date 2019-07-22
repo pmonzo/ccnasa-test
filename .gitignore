@@ -1,0 +1,11 @@
+# Target folder with maven builds
+/target/
+
+# Eclipse settings
+/.settings/
+
+# Eclipse project
+/.project
+
+# Logs
+/logs/
