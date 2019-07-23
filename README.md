@@ -23,6 +23,10 @@ and returns a Json with the countdown.
 
 ### Technologies
 
+#### Spring Boot
+
+A framework to make standalone applications with Spring.
+
 #### Spring Webflux
 
 A framework for rest webservices using Streams
