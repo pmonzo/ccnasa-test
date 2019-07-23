@@ -2,6 +2,11 @@ package ccnasa.data.api.v1;
 
 import ccnasa.ILaunch;
 
+/**
+ * A singleton for managing launches.
+ * @author pedro.monzo
+ *
+ */
 public enum LaunchResource {
 	INSTANCE;
 	

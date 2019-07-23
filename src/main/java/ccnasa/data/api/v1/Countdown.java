@@ -1,5 +1,10 @@
 package ccnasa.data.api.v1;
 
+/**
+ * Bean for the response of Countdown Resource
+ * @author pedro.monzo
+ *
+ */
 public class Countdown {
 
 	private final String remainingTime;

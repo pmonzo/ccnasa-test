@@ -15,12 +15,12 @@ public class TestLaunch {
 		Launch launch = new Launch.Builder().launchTime(5).id(1).build();
 		try {
 			Thread.sleep(1000);
-			String countdown = launch.countdown("s.S");
+			String countdown = launch.countdown();
 			logger.debug("countdown: " + countdown);
 			assertTrue(Float.valueOf(countdown) < Float.valueOf("4.00") 
 					&& Float.valueOf(countdown) > Float.valueOf("3.80"));
 			Thread.sleep(5000);
-			String countdownZero = launch.countdown("s.S");
+			String countdownZero = launch.countdown();
 			logger.debug("countdownZero: " + countdownZero);
 			assertTrue(Float.valueOf(countdownZero).equals(Float.valueOf("0.00")));
 		} catch (InterruptedException e) {

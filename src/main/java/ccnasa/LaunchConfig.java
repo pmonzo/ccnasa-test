@@ -19,6 +19,4 @@ public class LaunchConfig {
 		this.countdown = countdown;
 	}
 	
-	
-	
 }

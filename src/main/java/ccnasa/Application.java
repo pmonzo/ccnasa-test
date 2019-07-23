@@ -3,7 +3,6 @@ package ccnasa;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -27,6 +26,10 @@ public class Application {
 	}
 	
 	@EventListener(ApplicationReadyEvent.class)
+	/**
+	 * On application startup we setp-up the launch with the countdown loaded
+	 * from application.properties
+	 */
 	public void startLaunch(){
 		Launch launch = new Launch
 				.Builder()
